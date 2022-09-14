@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "papertexture-g4eedf198b_1920.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "papertexture-g4eedf198b_1920-1.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "papertexture-g4eedf198b_1920-2.jpg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

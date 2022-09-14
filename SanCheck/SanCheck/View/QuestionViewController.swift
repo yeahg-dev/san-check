@@ -11,6 +11,7 @@ class QuestionViewController: UIViewController {
     
     var viewModel: QuestionViewModel?
 
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var questionImageView: UIImageView!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var option1Button: UIButton!
@@ -18,6 +19,7 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        backgroundImageView.image = UIImage(named: "paperBackgroundImage")
         bind(viewModel: viewModel)
     }
     

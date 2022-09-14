@@ -15,7 +15,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionImage1" translatesAutoresizingMaskIntoConstraints="NO" id="Fmf-v2-SiU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QoG-JQ-A7i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionImage1" translatesAutoresizingMaskIntoConstraints="NO" id="Fmf-v2-SiU">
                                 <rect key="frame" x="40" y="143.66666666666666" width="295" height="220.99999999999997"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="LO6-Z9-QH6"/>
@@ -61,10 +64,14 @@
                         <color key="backgroundColor" red="0.51919263053588671" green="0.86078917980194092" blue="0.37377978934619105" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Fmf-v2-SiU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="6Mu-b4-B02"/>
+                            <constraint firstItem="QoG-JQ-A7i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6vT-GQ-wve"/>
                             <constraint firstItem="qdQ-g7-A3z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="7wo-Hd-2QN"/>
+                            <constraint firstAttribute="bottom" secondItem="QoG-JQ-A7i" secondAttribute="bottom" id="AcY-cw-mcZ"/>
+                            <constraint firstItem="QoG-JQ-A7i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Hj4-sM-enB"/>
                             <constraint firstItem="qdQ-g7-A3z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nln-EN-iMN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fmf-v2-SiU" secondAttribute="trailing" constant="40" id="Pkf-Z4-DHk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qdQ-g7-A3z" secondAttribute="trailing" constant="40" id="cZQ-iB-hh2"/>
+                            <constraint firstAttribute="trailing" secondItem="QoG-JQ-A7i" secondAttribute="trailing" id="g9X-jI-j4W"/>
                             <constraint firstItem="qdQ-g7-A3z" firstAttribute="top" secondItem="Fmf-v2-SiU" secondAttribute="bottom" constant="30" id="mBh-TK-Re0"/>
                             <constraint firstItem="UvU-uS-7fi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="mSY-l5-rNy"/>
                             <constraint firstItem="UvU-uS-7fi" firstAttribute="width" secondItem="Fmf-v2-SiU" secondAttribute="width" id="p7g-El-UUP"/>
@@ -74,6 +81,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="QoG-JQ-A7i" id="s8g-RJ-TqW"/>
                         <outlet property="option1Button" destination="Xup-mZ-Txa" id="20q-uk-1AW"/>
                         <outlet property="option2Button" destination="McC-Ve-JEm" id="Wcn-Fi-hI7"/>
                         <outlet property="questionImageView" destination="Fmf-v2-SiU" id="Q41-c4-TS6"/>
@@ -82,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124.18604651162791" y="-34.120171673819748"/>
+            <point key="canvasLocation" x="124" y="-34.729064039408868"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="gzs-TJ-kfo">
