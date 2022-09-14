@@ -19,7 +19,7 @@ enum QuestionType {
         switch self {
         case .one:
             return Question(
-                question: "처음 온 숲속을 산책할 때",
+                question: "Q. 처음 온 숲속을 산책할 때",
                 options: ["입구에 있는 지도를 보고 어디 갈지 무엇을 볼 지 정한다", "지도를 한번 슥 보고 발길 닿는 대로 간다"],
                 image: UIImage(named: "questionImage1"))
         case .two:

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A86814028D1957800BE2837 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86813F28D1957800BE2837 /* QuestionViewController.swift */; };
 		63A188FE28D16F1600799951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A188FD28D16F1600799951 /* AppDelegate.swift */; };
 		63A1890028D16F1600799951 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A188FF28D16F1600799951 /* SceneDelegate.swift */; };
 		63A1890228D16F1600799951 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1890128D16F1600799951 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A86813F28D1957800BE2837 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		63A188FA28D16F1600799951 /* SanCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A188FD28D16F1600799951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A188FF28D16F1600799951 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A86813E28D1956100BE2837 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A86813F28D1957800BE2837 /* QuestionViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		63A188F128D16F1600799951 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		63A188FC28D16F1600799951 /* SanCheck */ = {
 			isa = PBXGroup;
 			children = (
+				1A86813E28D1956100BE2837 /* View */,
 				63A1891628D1748500799951 /* ViewModel */,
 				63A1891128D16F7F00799951 /* Model */,
 				63A188FD28D16F1600799951 /* AppDelegate.swift */,
@@ -165,6 +176,7 @@
 			files = (
 				63A1890228D16F1600799951 /* ViewController.swift in Sources */,
 				63A1891328D16FA100799951 /* Question.swift in Sources */,
+				1A86814028D1957800BE2837 /* QuestionViewController.swift in Sources */,
 				63A188FE28D16F1600799951 /* AppDelegate.swift in Sources */,
 				63A1890028D16F1600799951 /* SceneDelegate.swift in Sources */,
 				63A1891828D1749200799951 /* QuestionViewModel.swift in Sources */,
