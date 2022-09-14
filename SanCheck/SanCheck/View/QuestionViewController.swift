@@ -18,8 +18,6 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        option1Button.configuration?.titleAlignment = .center
-        option2Button.configuration?.titleAlignment = .center
         bind(viewModel: viewModel)
         // Do any additional setup after loading the view.
     }
