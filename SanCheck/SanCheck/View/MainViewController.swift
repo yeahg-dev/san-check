@@ -15,6 +15,8 @@ final class MainViewController: UIViewController {
     private let Question4ViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController
     private let Question5ViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController
     
+    private let SubmitViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SubmitViewController") as? SubmitViewController
+    
     private let pageViewController = UIPageViewController(
         transitionStyle: .pageCurl,
         navigationOrientation: .horizontal)
@@ -22,16 +24,13 @@ final class MainViewController: UIViewController {
     var currentIdx:Int = 0
     var chooseIdx = 0
     
-    private lazy var QuestionViewControllers = [Question1ViewController, Question2ViewController, Question3ViewController, Question4ViewController, Question5ViewController]
+    private lazy var QuestionViewControllers = [Question1ViewController, Question2ViewController, Question3ViewController, Question4ViewController, Question5ViewController, SubmitViewController]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
         
-        let startVC = self.viewControllerAtIndex(index: chooseIdx) as QuestionViewController
-        let viewControllers = NSArray(object: startVC)
-        
-        pageViewController.setViewControllers(viewControllers as? [UIViewController], direction: .forward, animated: true)
+        pageViewController.setViewControllers([Question1ViewController] as? [UIViewController], direction: .forward, animated: true)
         self.addChild(pageViewController)
         self.view.addSubview(pageViewController.view)
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -52,10 +51,6 @@ final class MainViewController: UIViewController {
         pageViewController.delegate = self
     }
     
-    func viewControllerAtIndex (index : Int) -> QuestionViewController {
-        return QuestionViewControllers[index] ?? Question1ViewController!
-    }
-    
     func bindViewModel() {
         Question1ViewController?.viewModel = QuestionViewModel(question: QuestionType.one.question)
         Question1ViewController?.bind(viewModel: QuestionViewModel(question: QuestionType.one.question))
@@ -70,7 +65,7 @@ final class MainViewController: UIViewController {
 extension MainViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = QuestionViewControllers.firstIndex(of: viewController as! QuestionViewController) else { return nil }
+        guard let index = QuestionViewControllers.firstIndex(of: viewController) else { return nil }
         let previousIndex = index - 1
         if previousIndex < 0 {
             return nil
@@ -79,7 +74,7 @@ extension MainViewController: UIPageViewControllerDataSource, UIPageViewControll
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = QuestionViewControllers.firstIndex(of: viewController as! QuestionViewController) else { return nil }
+        guard let index = QuestionViewControllers.firstIndex(of: viewController) else { return nil }
         let nextIndex = index + 1
         if nextIndex == QuestionViewControllers.count {
             return nil

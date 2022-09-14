@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A86814028D1957800BE2837 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86813F28D1957800BE2837 /* QuestionViewController.swift */; };
+		1A86814228D1C93200BE2837 /* SubmitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A86814128D1C93200BE2837 /* SubmitViewController.swift */; };
 		63A188FE28D16F1600799951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A188FD28D16F1600799951 /* AppDelegate.swift */; };
 		63A1890028D16F1600799951 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A188FF28D16F1600799951 /* SceneDelegate.swift */; };
 		63A1890228D16F1600799951 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1890128D16F1600799951 /* MainViewController.swift */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		1A86813F28D1957800BE2837 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		1A86814128D1C93200BE2837 /* SubmitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitViewController.swift; sourceTree = "<group>"; };
 		63A188FA28D16F1600799951 /* SanCheck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanCheck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A188FD28D16F1600799951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A188FF28D16F1600799951 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			children = (
 				1A86813F28D1957800BE2837 /* QuestionViewController.swift */,
 				63A1890128D16F1600799951 /* MainViewController.swift */,
+				1A86814128D1C93200BE2837 /* SubmitViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A86814228D1C93200BE2837 /* SubmitViewController.swift in Sources */,
 				63A1890228D16F1600799951 /* MainViewController.swift in Sources */,
 				63A1891328D16FA100799951 /* Question.swift in Sources */,
 				1A86814028D1957800BE2837 /* QuestionViewController.swift in Sources */,
