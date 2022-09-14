@@ -10,6 +10,11 @@ import UIKit
 struct Question {
     
     let question: String
-    let options: [String]
+    let options: [Option]
     let image: UIImage?
+}
+
+struct Option {
+    var answer: String
+    var value: String
 }

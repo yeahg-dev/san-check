@@ -8,6 +8,15 @@
 import UIKit
 
 final class MainViewController: UIViewController {
+    private let tester = Tester()
+    
+    private var options: [Option?] {
+        [Question1ViewController?.viewModel?.selectedOption,
+         Question2ViewController?.viewModel?.selectedOption,
+         Question3ViewController?.viewModel?.selectedOption,
+         Question4ViewController?.viewModel?.selectedOption,
+         Question5ViewController?.viewModel?.selectedOption,]
+    }
     
     private let Question1ViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController
     private let Question2ViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "QuestionViewController") as? QuestionViewController
@@ -33,6 +42,7 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
+        SubmitViewController?.tester = tester
         
         pageViewController.setViewControllers([Question1ViewController] as? [UIViewController], direction: .forward, animated: true)
         self.addChild(pageViewController)
@@ -56,6 +66,7 @@ final class MainViewController: UIViewController {
         Question3ViewController?.delegate = self
         Question4ViewController?.delegate = self
         Question5ViewController?.delegate = self
+        SubmitViewController?.delegate = self
         
     }
     
@@ -106,4 +117,12 @@ extension MainViewController: QuestionViewControllerDelegate {
         pageViewController.setViewControllers([nextPageViewController] as? [UIViewController], direction: .forward, animated: true)
     }
    
+}
+
+extension MainViewController: SubmitViewControllerDelegate {
+    
+    func getSelectedOption() -> [Option?] {
+        return options
+    }
+    
 }

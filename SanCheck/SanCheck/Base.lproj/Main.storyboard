@@ -221,6 +221,8 @@
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="wko-9r-ITE" id="lqN-FN-PuO"/>
+                        <outlet property="mountainImageView" destination="8YA-qF-qHr" id="cfM-Rs-4J5"/>
+                        <outlet property="mountainLabel" destination="Bhr-8D-q6z" id="a3d-MU-gX6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ard-aO-jH4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,6 +11,9 @@ class SubmitViewController: UIViewController {
     
     @IBOutlet weak private var backgroundImageView: UIImageView!
     @IBOutlet weak private var checkButton: UIButton!
+    var tester: Tester?
+    
+    weak var delegate: SubmitViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +22,16 @@ class SubmitViewController: UIViewController {
     }
     
     @IBAction func showResult(_ sender: Any) {
+        let result: String = (delegate?.getSelectedOption().compactMap{ $0?.answer }.reduce("") { String($0) + String($1) })!
+        
+        guard let testResult = tester?.test(reducedOptionValue: result) else {
+            return
+        }
+        let viewModel = MountainResultViewModel(mountainResult: testResult)
         guard let resultViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {
             return
         }
+        resultViewController.viewModel = viewModel
         resultViewController.modalPresentationStyle = .popover
         present(resultViewController, animated: true)
     }
@@ -37,4 +47,9 @@ class SubmitViewController: UIViewController {
     }
     
 
+}
+
+protocol SubmitViewControllerDelegate: AnyObject {
+    
+    func getSelectedOption() -> [Option?]
 }

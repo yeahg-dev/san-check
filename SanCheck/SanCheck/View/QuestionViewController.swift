@@ -31,8 +31,19 @@ class QuestionViewController: UIViewController {
         bind(viewModel: viewModel)
     }
     
-    @IBAction func button1DidTapped(_ sender: Any) {
+    @IBAction func button1DidTapped(_ sender: UIButton) {
         delegate?.goToNextPage(before: self)
+        
+        switch sender {
+        case option1Button:
+            viewModel?.selectedIndex = 0
+            print(viewModel?.options.first.debugDescription)
+        case option2Button:
+            viewModel?.selectedIndex = 1
+            print(viewModel?.options.first.debugDescription)
+        default:
+            return
+        }
     }
     
     private func configureButtons() {
@@ -56,8 +67,8 @@ class QuestionViewController: UIViewController {
     func bind(viewModel: QuestionViewModel?) {
         questionImageView.image = viewModel?.image
         questionLabel.text = viewModel?.question
-        option1Button.setTitle(viewModel?.options[0], for: .normal)
-        option2Button.setTitle(viewModel?.options[1], for: .normal)
+        option1Button.setTitle(viewModel?.options[0].answer, for: .normal)
+        option2Button.setTitle(viewModel?.options[1].answer, for: .normal)
     }
 
 }
