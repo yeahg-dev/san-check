@@ -19,6 +19,7 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureButtons()
         backgroundImageView.image = UIImage(named: "paperBackgroundImage")
         bind(viewModel: viewModel)
     }
@@ -26,16 +27,18 @@ class QuestionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bind(viewModel: viewModel)
-        configureButtons()
     }
     
     private func configureButtons() {
+        option1Button.titleLabel?.textAlignment = .center
         option1Button.layer.cornerRadius = 10
         option1Button.layer.shadowColor = UIColor.orange.cgColor
         option1Button.layer.shadowRadius = 10
         option1Button.layer.shadowOffset = CGSize(width: 5, height: 5)
         option1Button.layer.shadowOpacity = 0.5
         option1Button.layer.masksToBounds = false
+        
+        option2Button.titleLabel?.textAlignment = .center
         option2Button.layer.cornerRadius = 10
         option2Button.layer.shadowColor = UIColor.orange.cgColor
         option2Button.layer.shadowRadius = 10
@@ -47,8 +50,8 @@ class QuestionViewController: UIViewController {
     func bind(viewModel: QuestionViewModel?) {
         questionImageView.image = viewModel?.image
         questionLabel.text = viewModel?.question
-        option1Button.titleLabel?.text = viewModel?.options[0]
-        option2Button.titleLabel?.text = viewModel?.options[1]
+        option1Button.setTitle(viewModel?.options[0], for: .normal)
+        option2Button.setTitle(viewModel?.options[1], for: .normal)
     }
 
 }
