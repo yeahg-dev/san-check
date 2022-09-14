@@ -44,13 +44,13 @@
                                         </constraints>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="입구에 있는 지도를 보고 어디 갈지 무엇을 볼 지 정한다">
+                                        <buttonConfiguration key="configuration" style="plain" title="입구에 있는 지도를 보고 어디 갈지 무엇을 볼 지 정한다" titleAlignment="center">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q. 처음 온 숲속을 산책할 때" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-g7-A3z">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q. 처음 온 숲속을 산책할 때" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdQ-g7-A3z">
                                 <rect key="frame" x="40" y="394.66666666666669" width="295" height="23"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                 <nil key="textColor"/>
@@ -73,6 +73,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UvU-uS-7fi" secondAttribute="bottom" constant="85" id="zWF-Qs-ogh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="option1Button" destination="Xup-mZ-Txa" id="20q-uk-1AW"/>
+                        <outlet property="option2Button" destination="McC-Ve-JEm" id="Wcn-Fi-hI7"/>
+                        <outlet property="questionImageView" destination="Fmf-v2-SiU" id="Q41-c4-TS6"/>
+                        <outlet property="questionLabel" destination="qdQ-g7-A3z" id="yOc-Tx-SHC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
