@@ -17,6 +17,8 @@ class QuestionViewController: UIViewController {
     @IBOutlet weak var option1Button: UIButton!
     @IBOutlet weak var option2Button: UIButton!
     
+    weak var delegate: QuestionViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
@@ -27,6 +29,10 @@ class QuestionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bind(viewModel: viewModel)
+    }
+    
+    @IBAction func button1DidTapped(_ sender: Any) {
+        delegate?.goToNextPage(before: self)
     }
     
     private func configureButtons() {
@@ -55,3 +61,9 @@ class QuestionViewController: UIViewController {
     }
 
 }
+
+protocol QuestionViewControllerDelegate: AnyObject {
+    func goToNextPage(before: UIViewController)
+}
+
+

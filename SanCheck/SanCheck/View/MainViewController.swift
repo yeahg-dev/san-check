@@ -46,13 +46,17 @@ final class MainViewController: UIViewController {
             view.bottomAnchor.constraint(equalTo: pageViewController.view.bottomAnchor)
         ])
         bindViewModel()
-        
-        view.backgroundColor = .systemPink
     }
     
     private func setupDelegate() {
         pageViewController.dataSource = self
         pageViewController.delegate = self
+        Question1ViewController?.delegate = self
+        Question2ViewController?.delegate = self
+        Question3ViewController?.delegate = self
+        Question4ViewController?.delegate = self
+        Question5ViewController?.delegate = self
+        
     }
     
     func bindViewModel() {
@@ -86,4 +90,20 @@ extension MainViewController: UIPageViewControllerDataSource, UIPageViewControll
         return QuestionViewControllers[nextIndex]
     }
     
+}
+
+extension MainViewController: QuestionViewControllerDelegate {
+    func goToNextPage(before: UIViewController) {
+        
+        guard let index = QuestionViewControllers.firstIndex(of: before) else { return  }
+        let nextIndex = index + 1
+        if nextIndex == QuestionViewControllers.count {
+            return
+        }
+        
+        let nextPageViewController = QuestionViewControllers[nextIndex]
+        
+        pageViewController.setViewControllers([nextPageViewController] as? [UIViewController], direction: .forward, animated: true)
+    }
+   
 }
