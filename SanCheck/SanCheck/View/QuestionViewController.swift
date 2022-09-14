@@ -19,14 +19,18 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bind(viewModel: viewModel)
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        bind(viewModel: viewModel)
     }
     
     func bind(viewModel: QuestionViewModel?) {
         questionImageView.image = viewModel?.image
         questionLabel.text = viewModel?.question
         option1Button.titleLabel?.text = viewModel?.options[0]
-        option1Button.titleLabel?.text = viewModel?.options[1]
+        option2Button.titleLabel?.text = viewModel?.options[1]
     }
 
 }

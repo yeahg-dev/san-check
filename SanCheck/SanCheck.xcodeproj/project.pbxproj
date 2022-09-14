@@ -49,6 +49,7 @@
 			isa = PBXGroup;
 			children = (
 				1A86813F28D1957800BE2837 /* QuestionViewController.swift */,
+				63A1890128D16F1600799951 /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -77,7 +78,6 @@
 				63A1891128D16F7F00799951 /* Model */,
 				63A188FD28D16F1600799951 /* AppDelegate.swift */,
 				63A188FF28D16F1600799951 /* SceneDelegate.swift */,
-				63A1890128D16F1600799951 /* MainViewController.swift */,
 				63A1890328D16F1600799951 /* Main.storyboard */,
 				63A1890628D16F1A00799951 /* Assets.xcassets */,
 				63A1890828D16F1A00799951 /* LaunchScreen.storyboard */,
