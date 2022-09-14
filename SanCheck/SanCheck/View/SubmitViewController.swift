@@ -18,6 +18,14 @@ class SubmitViewController: UIViewController {
         configureCheckButton()
     }
     
+    @IBAction func showResult(_ sender: Any) {
+        guard let resultViewController =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ResultViewController") as? ResultViewController else {
+            return
+        }
+        resultViewController.modalPresentationStyle = .popover
+        present(resultViewController, animated: true)
+    }
+    
     private func configureCheckButton() {
         checkButton.titleLabel?.textAlignment = .center
         checkButton.layer.cornerRadius = 10

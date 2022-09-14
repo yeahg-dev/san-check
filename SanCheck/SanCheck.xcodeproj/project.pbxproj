@@ -18,6 +18,7 @@
 		63A1891328D16FA100799951 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1891228D16FA100799951 /* Question.swift */; };
 		63A1891528D1724200799951 /* QuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1891428D1724200799951 /* QuestionType.swift */; };
 		63A1891828D1749200799951 /* QuestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1891728D1749200799951 /* QuestionViewModel.swift */; };
+		63A1891A28D1D2EB00799951 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1891928D1D2EB00799951 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		63A1891228D16FA100799951 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		63A1891428D1724200799951 /* QuestionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionType.swift; sourceTree = "<group>"; };
 		63A1891728D1749200799951 /* QuestionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewModel.swift; sourceTree = "<group>"; };
+		63A1891928D1D2EB00799951 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				1A86813F28D1957800BE2837 /* QuestionViewController.swift */,
 				63A1890128D16F1600799951 /* MainViewController.swift */,
 				1A86814128D1C93200BE2837 /* SubmitViewController.swift */,
+				63A1891928D1D2EB00799951 /* ResultViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				63A1890028D16F1600799951 /* SceneDelegate.swift in Sources */,
 				63A1891828D1749200799951 /* QuestionViewModel.swift in Sources */,
 				63A1891528D1724200799951 /* QuestionType.swift in Sources */,
+				63A1891A28D1D2EB00799951 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
