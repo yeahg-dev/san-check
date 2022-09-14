@@ -24,6 +24,22 @@ class QuestionViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         bind(viewModel: viewModel)
+        configureButtons()
+    }
+    
+    private func configureButtons() {
+        option1Button.layer.cornerRadius = 10
+        option1Button.layer.shadowColor = UIColor.orange.cgColor
+        option1Button.layer.shadowRadius = 10
+        option1Button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        option1Button.layer.shadowOpacity = 0.5
+        option1Button.layer.masksToBounds = false
+        option2Button.layer.cornerRadius = 10
+        option2Button.layer.shadowColor = UIColor.orange.cgColor
+        option2Button.layer.shadowRadius = 10
+        option2Button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        option2Button.layer.shadowOpacity = 0.5
+        option2Button.layer.masksToBounds = false
     }
     
     func bind(viewModel: QuestionViewModel?) {
