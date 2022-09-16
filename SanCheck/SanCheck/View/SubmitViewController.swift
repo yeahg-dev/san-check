@@ -22,7 +22,7 @@ class SubmitViewController: UIViewController {
     }
     
     @IBAction func showResult(_ sender: Any) {
-        let result: String = (delegate?.getSelectedOption().compactMap{ $0?.answer }.reduce("") { String($0) + String($1) })!
+        let result: String = (delegate?.getSelectedOption().compactMap{ $0?.value }.reduce("") { String($0) + String($1) })!
         
         guard let testResult = tester?.test(reducedOptionValue: result) else {
             return

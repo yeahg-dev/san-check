@@ -11,13 +11,7 @@ class Tester {
     var answerValue: [String] = []
     
     func test(reducedOptionValue: String) -> MountainResult {
-        switch reducedOptionValue {
-        case "ac":
-            return MountainResult(mountain: "히말라야 산", quote: "박정민과 함께,,,", image: UIImage(named: "questionImage2"))
-        default:
-            return MountainResult(mountain: "히말라야 산", quote: "박정민과 함께,,,", image: UIImage(named: "questionImage2"))
-        }
+        return MBTI(rawValue: reducedOptionValue)!.mountainResult
     }
-    
     
 }
