@@ -23,15 +23,7 @@ struct QuestionViewModel {
     }
     
     var selectedOption: Option?
-    
-//    var isSelected: Bool {
-//        if let _ = selectedOption {
-//            return true
-//        } else {
-//            return false
-//        }
-//    }
-    
+
     init(question: Question) {
         self.question = question.question
         self.options = question.options

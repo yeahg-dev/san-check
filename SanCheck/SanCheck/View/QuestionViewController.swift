@@ -37,10 +37,8 @@ class QuestionViewController: UIViewController {
         switch sender {
         case option1Button:
             viewModel?.selectedIndex = 0
-            print(viewModel?.options.first.debugDescription)
         case option2Button:
             viewModel?.selectedIndex = 1
-            print(viewModel?.options.first.debugDescription)
         default:
             return
         }

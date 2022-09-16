@@ -12,6 +12,7 @@ class ResultViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var mountainImageView: UIImageView!
     @IBOutlet weak var mountainLabel: UILabel!
+    @IBOutlet weak var quoteLabel: UILabel!
     var viewModel: MountainResultViewModel?
     
     override func viewDidLoad() {
@@ -24,5 +25,6 @@ class ResultViewController: UIViewController {
     func bind(viewModel: MountainResultViewModel?) {
         mountainImageView.image = viewModel?.image
         mountainLabel.text = viewModel?.mountain
+        quoteLabel.text = viewModel?.quote
     }
 }
