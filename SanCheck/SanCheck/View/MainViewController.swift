@@ -36,7 +36,7 @@ final class MainViewController: UIViewController {
     private lazy var QuestionViewControllers = [Question1ViewController, Question2ViewController, Question3ViewController, Question4ViewController, Question5ViewController, SubmitViewController]
     
     @IBAction func unwindToFirst(_ unwindSegue: UIStoryboardSegue) {
-        pageViewController.setViewControllers([Question1ViewController] as? [UIViewController], direction: .forward, animated: true)
+        pageViewController.setViewControllers([Question1ViewController] as? [UIViewController], direction: .forward, animated: false)
         }
     
     override func viewDidLoad() {
